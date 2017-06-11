@@ -28,6 +28,7 @@ while True:
     print('Gyro:', 'x=', gyro_x, 'y=', gyro_y, 'z=', gyro_z)
     print('Mag:', 'x=', mag_x, 'y=', mag_y, 'z=', mag_z)
     print('Accel:', 'x=', accel_x, 'y=', accel_y, 'z=', accel_z)
+    print('Raw Temp:', imu.rawTemp())
 
     # Wait half a second before repeating
     time.sleep(0.5)

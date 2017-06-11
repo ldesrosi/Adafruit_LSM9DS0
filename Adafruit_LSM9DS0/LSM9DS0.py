@@ -188,7 +188,7 @@ class LSM9DS0(object):
                self.readLowHigh(i2c_device, xyz_lh[2]))  # Pass z
 
         return xyz
-    
+ 
     def readGyro(self):
         """Return gyroscope (x, y, z) tuple"""
 
@@ -214,6 +214,5 @@ class LSM9DS0(object):
     # absolute value, instead measuring change in temp inside the chip
     def rawTemp(self):
         """Returns temperature value (WARNING: not ambient temperature)"""
-
         # The temperature values are read from mag/ accel device
-        return self.readSensor(self.mag, LSM9DS0_OUT_TEMP_LH)
+        return self.readLowHigh(self.mag, LSM9DS0_OUT_TEMP_LH)
